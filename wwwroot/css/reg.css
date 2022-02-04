@@ -1,0 +1,67 @@
+body {
+  margin-top: 8%;
+  margin-left: 35%;
+  margin-right: 35%;
+  background-image: url(Картинки/);
+}
+
+.h1 {
+  font-family: Arial;
+}
+
+.container {
+  border: 1px solid #ccc;
+  text-align: center;
+  height: 430px;
+  border-radius: 25px;
+  background-color: #fcfcfc;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.col {
+  padding-top: 30px;
+}
+
+.f1 {
+
+}
+
+.i1 {
+  width: 280px;
+  height: 30px;
+}
+
+.otpr {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.otpr:hover {
+  background-color: #00a60b;
+}
+
+.a1 {
+
+}
+
+@media only screen and (max-width: 576px) {
+    .a1 {
+      font-size: 13px;
+    }
+}
+
+.p1 {
+
+}
+
+@media only screen and (max-width: 576px) {
+    .p1 {
+      font-size: 13px;
+    }
+}

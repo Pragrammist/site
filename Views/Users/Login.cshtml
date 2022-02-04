@@ -1,0 +1,51 @@
+﻿@using MarketPlace.Models.UsersModels;
+
+@model LoginUserViewModel
+
+<head>
+    <link rel="stylesheet" href="auth.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <h1 class="h1">Авторизация</h1>
+            <form class="f1" asp-action="Login" asp-controller="Users" method="POST" asp-antiforgery="true">
+                <div asp-validation-summary="ModelOnly"></div>
+
+                <div>
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input class="i1" type="text" class="form-control" placeholder="Почта" asp-for="Email">
+                        <span asp-validation-for=" Email" />
+                    </div><br />
+                    <div class="form-group">
+                        <label asp-for="Password"></label>
+                        <input class="i1" type="password" class="form-control" id="pass" placeholder="Пароль" asp-for="Password">
+                        <span asp-validation-for="Password" />
+                    </div><br />
+                    <div>
+                        <label>Запомнить?</label>
+                        <input type="checkbox" asp-for="IsRemember">
+                    </div><br />
+                    <div class="form-group">
+                     
+                        <button class="otpr" type="submit">Войти</button>
+                    </div><br />
+
+                </div>
+                
+
+                
+
+                
+            </form>
+        </div><br />
+        <a class="a1" asp-action="Register" asp-controller="Users">Зарегистрироваться</a><br />
+        <a asp-controller="Home" asp-action="Index">Вернуться</a>
+    </div>
+</body>
+@section scripts{
+
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+}

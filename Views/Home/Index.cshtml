@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet">
+    <title>@ViewData</title>
+</head>
+<body>
+    <div id="main">
+        <!-- header  -->
+        <div id="header">
+            <img id="logo" src="" alt="">
+            <div id="profile">
+                <a id="profa"><img id="proflogo" src="" alt=""></a>
+            </div>
+           
+            <div id="menu">
+                <a class="ma" asp-action="Register" asp-controller="Users">Регестрация</a>
+                <div id="auth">
+                    <a class="ma" asp-action="Login" asp-controller="Users">Авторизация</a>
+                </div>
+                <a class="ma" asp-action="Logout" asp-controller="Users">Выйти</a>
+            </div>
+        </div>
+        <!-- conteiner  -->
+        <div class="container">
+            <div id="cotegor">
+
+            </div>
+            <div id="cont">
+
+            </div>
+        </div>
+        <!-- bottom  -->
+        <div id="bottom">
+            <p id="info"></p>
+        </div>
+    </div>
+</body>
+
+
+

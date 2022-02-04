@@ -1,0 +1,56 @@
+﻿@using MarketPlace.Models.UsersModels;
+
+@model RegUserViewModel
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta charset="utf-8">
+    <link href="reg.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <h1 class="h1">Регистрация</h1><br />
+            <form class="f1" method="POST" asp-controller="Users" asp-action="Register">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div>
+                    <div>
+                        <label asp-for="Name"></label>
+                        <input type="text" class="form-control i1" placeholder="Имя" asp-for="Name">
+                        <span asp-validation-for="Name"></span>
+                    </div><br />
+                    <div>
+                        <label asp-for="Email"></label>
+                        <input type="text" class="form-control i1" placeholder="Почта" asp-for="Email">
+                        <span asp-validation-for="Email"></span>
+                    </div><br />
+                    <div>
+                        <label asp-for="Password"></label>
+                        <input type="password" class="form-control i1" placeholder="Пароль" asp-for="Password">
+                        <span asp-validation-for="Password"></span>
+                    </div><br />
+                    <div>
+                        <label asp-for="RepeatPassword"></label>
+                        <input type="password" class="form-control i1" placeholder="Пароль" asp-for="RepeatPassword">
+                        <span asp-validation-for="RepeatPassword"></span>
+                    </div><br />
+                    <div>
+                         <label>Запомнить?</label>
+                        <input type="checkbox" asp-for="IsRemember">
+                    </div><br />
+                    <div>
+                        <button class="btn btn-success otpr" type="submit">Зарегистрироваться</button>
+                    </div><br />
+                </div>
+                
+            </form>
+        </div><br />
+        <a asp-controller="Home" asp-action="Index">Вернуться</a>
+    </div>
+</body>
+
+@section scripts{
+
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+}
